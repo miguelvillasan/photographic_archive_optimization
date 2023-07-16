@@ -68,6 +68,8 @@ const Gallery = ({ searchTerm, setSearchTerm }) => {
                 subjectPoints: item.subject_access_points.join(", "),
                 placePoints: item.place_access_points.join(", "),
                 creationDate: item.creation_date,
+                captions: item.captions,
+                tags: item.tags.join(", "),
               });
             }}
             alt={item.title}
@@ -95,6 +97,14 @@ const Gallery = ({ searchTerm, setSearchTerm }) => {
               <Text mb="2">
                 <b>Fecha de creación: </b>
                 {modalContent.creationDate}
+              </Text>
+              <Text mb="2">
+                <b>Descripción: </b>
+                {modalContent.captions}
+              </Text>
+              <Text mb="2">
+                <b>Tags: </b>
+                {modalContent.tags}
               </Text>
             </ModalBody>
           </ModalContent>
